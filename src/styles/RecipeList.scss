@@ -1,0 +1,42 @@
+.recipe-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px; /* Padding around the list */
+}
+
+.recipe-card {
+    background-color: white; /* Card background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent content overflow */
+    margin: 15px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+    width: 250px; /* Set a fixed width for cards */
+    text-decoration: none; /* Remove underline from links */
+
+  &:hover {
+    transform: translateY(-5px); // Lift effect on hover
+  }
+
+  .recipe-image {
+    width: 100%; /* Make the image take full width */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 2px solid #ff6f61; /* Bottom border for separation */
+  }
+
+  .recipe-title {
+    font-size: 18px; /* Title size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Title color */
+    margin: 10px; /* Margin around title */
+  }
+  .recipe-category {
+    font-size: 14px; /* Category size */
+    color: #666; /* Category color */
+    margin: 0 10px 10px; /* Margin around category */
+  }
+}

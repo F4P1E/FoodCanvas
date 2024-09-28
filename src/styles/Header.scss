@@ -1,0 +1,47 @@
+/* Header.scss */
+
+.header {
+  background-color: #ff6f61; // Header background color
+  color: white; // Text color
+  text-align: center; // Center text
+  padding: 0; // Padding
+  margin: 0;
+  display: flex; // Flexbox for alignment
+  align-items: center; // Center vertically
+  justify-content: center; // Center horizontally
+}
+.header-content {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  padding: 20px;
+}
+.header-title {
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+}
+.header h1 {
+  font-size: 2rem; // Title size
+  margin: 0; // Remove default margin
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  color: #ffeb3b; /* Yellow highlight on hover */
+}
+.header img {
+  height: 50px; // Logo height
+  margin-right: 15px; // Space between logo and title
+}

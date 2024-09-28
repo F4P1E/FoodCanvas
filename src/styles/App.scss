@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.app-header {
+  display: flex;
+  justify-content: center; /* Centers the title horizontally */
+  align-items: center; /* Centers vertically if needed */
+  padding: 20px; /* Adjust padding as necessary */
+  font-size: 2em; /* Adjust font size */
+  color: #333; /* Set text color */
+}
+
+.logo {
+  height: 50px; /* Adjust the height as necessary */
+  margin-right: 20px; /* Space between logo and search bar */
+}
+#root {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Make sure the root takes at least full viewport height */
+}
+
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  background-color: #ff6f61; /* Adjust background color */
+  text-align: center; /* Center text */
+  padding: 20px; /* Add padding */
+  width: 100%; /* Full width */
+}
+.app-header {
+  display: flex; // Use flexbox for alignment
+  align-items: center; // Center items vertically
+  justify-content: center; // Center items horizontally
+  padding: 20px; // Padding around the header
+  background-color: #f8f8f8; // Light background for the header
+}
+
+.logo {
+  height: 50px; // Adjust the height of the logo
+  margin-right: 15px; // Space between logo and search bar
+}
+
+.app-content {
+  padding: 20px; // Add padding to the content area
+  min-height: calc(100vh - 150px); // Adjust height to prevent overlap with footer
+}
+.container {
+    max-width: 100%; /* Ensure it does not exceed the viewport */
+    overflow: hidden; /* Hide any overflowing content */
+  }

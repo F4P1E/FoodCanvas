@@ -1,0 +1,40 @@
+/* Navbar.scss */
+.navbar {
+    background-color: #ff6f61; /* Navbar background color */
+    padding: 15px 0; /* Padding for top and bottom */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure the container takes the full width */
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0; /* Ensure there’s no padding */
+    margin: 0; /* Ensure there’s no margin */
+    gap: 30px;
+  }
+  
+  .navbar-menu li {
+    display: inline; /* Inline for each item */
+  }
+  
+  .navbar-menu a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust the font size */
+    padding: 5px 15px; /* Padding for links */
+    transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
+  }
+  
+  .navbar-menu a:hover {
+    background-color: #ff4c3b; /* Hover background color */
+    border-radius: 4px; /* Rounded corners on hover */
+  }
+  
