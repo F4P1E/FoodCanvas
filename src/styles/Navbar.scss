@@ -1,40 +1,69 @@
-/* Navbar.scss */
 .navbar {
-    background-color: #ff6f61; /* Navbar background color */
-    padding: 15px 0; /* Padding for top and bottom */
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center the content horizontally */
-  }
+  background-color: #333; // Dark background
+  padding: 10px;
   
   .navbar-container {
     display: flex;
-    justify-content: center;
-    width: 100%; /* Ensure the container takes the full width */
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-links {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 8px 12px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #ff6347; // Highlight on hover
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      .dropdown-button {
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+
+        &:focus {
+          outline: none; // Remove outline on focus
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%; // Position below the button
+        left: 0;
+        background-color: white; // Background for dropdown
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        margin-top: 5px;
+
+        li {
+          padding: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #f0f0f0; // Highlight on hover
+          }
+        }
+      }
+    }
   }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0; /* Ensure there’s no padding */
-    margin: 0; /* Ensure there’s no margin */
-    gap: 30px;
-  }
-  
-  .navbar-menu li {
-    display: inline; /* Inline for each item */
-  }
-  
-  .navbar-menu a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust the font size */
-    padding: 5px 15px; /* Padding for links */
-    transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
-  }
-  
-  .navbar-menu a:hover {
-    background-color: #ff4c3b; /* Hover background color */
-    border-radius: 4px; /* Rounded corners on hover */
-  }
-  
+}

@@ -1,0 +1,26 @@
+.recommended-ingredients {
+    margin: 20px 0;
+  
+    h2 {
+      color: #333;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        margin: 5px 0;
+  
+        a {
+          color: #28a745;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

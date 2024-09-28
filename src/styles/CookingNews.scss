@@ -1,0 +1,81 @@
+.cooking-news {
+    background-color: #f9f9f9; // Light background for the news section
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff6347; // Tomato color for the border
+      padding-bottom: 10px;
+    }
+  
+    .news-container {
+      display: flex;
+      flex-wrap: wrap; // Allow cards to wrap onto the next line
+      gap: 20px; // Space between cards
+  
+      .news-card {
+        background-color: #fff; // White background for each news card
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); // Subtle shadow
+        overflow: hidden; // Hide overflow for rounded corners
+        transition: transform 0.2s; // Smooth hover effect
+        width: calc(33.333% - 20px); // Three cards per row (adjust as needed)
+  
+        &:hover {
+          transform: translateY(-2px); // Slight lift on hover
+        }
+  
+        .news-image {
+          width: 100%; // Full width for the image
+          height: 200px; // Fixed height for uniformity
+          object-fit: cover; // Maintain aspect ratio
+        }
+  
+        .news-content {
+          padding: 15px;
+  
+          .news-title {
+            font-size: 1.25rem;
+            color: #333;
+            margin: 0 0 10px;
+          }
+  
+          .news-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0 0 10px;
+          }
+  
+          .news-link {
+            text-decoration: none; // Remove underline
+            color: #ff6347; // Tomato color for links
+            font-weight: bold;
+  
+            &:hover {
+              text-decoration: underline; // Underline on hover
+              color: #d9534f; // Darker tomato color on hover
+            }
+          }
+        }
+      }
+    }
+  
+    // Responsive styles
+    @media (max-width: 768px) {
+      .news-card {
+        width: calc(50% - 20px); // Two cards per row on smaller screens
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .news-card {
+        width: 100%; // One card per row on mobile screens
+      }
+    }
+  }
+  

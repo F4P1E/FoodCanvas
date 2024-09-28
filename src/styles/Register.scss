@@ -1,48 +1,24 @@
-// src/styles/Register.scss
-.register {
-    padding: 20px;
-    max-width: 400px;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
     color: #333;
-  
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #ff6f61; // Primary color
-    }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-  
-      .form-group {
-        margin-bottom: 15px;
-  
-        label {
-          margin-bottom: 5px;
-        }
-  
-        input {
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          width: 100%;
-        }
-      }
-  
-      button {
-        padding: 10px;
-        background-color: #ff6f61; // Primary color
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #ff3d30; // Darker shade on hover
-        }
-      }
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745; // Bootstrap success color
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #218838; // Darker shade on hover
     }
   }
-  
+}
