@@ -1,0 +1,168 @@
+.profile-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #eaeaea; // Light border for separation
+    border-radius: 8px;
+}
+
+.profile-main {
+    flex: 3;
+    margin-right: 20px;
+    background: white; // Background for main content
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea; // Bottom border
+    padding-bottom: 15px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px; // Circular image
+    margin-right: 20px;
+    border: 2px solid #ccc; // Border for profile picture
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.editable-name {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em; // Larger font size
+}
+
+.name-input,
+.bio-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px; // Rounded corners
+    border: 1px solid #ccc;
+    transition: border-color 0.2s; // Transition effect
+}
+
+.name-input:focus,
+.bio-input:focus {
+    border-color: #007bff; // Highlight on focus
+}
+
+.blog-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.blog-input input,
+.blog-input textarea {
+    border-radius: 8px; // Rounded corners
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.2s; // Transition effect
+}
+
+.blog-input input:focus,
+.blog-input textarea:focus {
+    border-color: #007bff; // Highlight on focus
+}
+
+.add-blog-button {
+    background-color: #007bff; // Primary button color
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s; // Transition effect
+}
+
+.add-blog-button:hover {
+    background-color: #0056b3; // Darker shade on hover
+}
+
+.blogs-list {
+    margin-top: 20px;
+}
+
+.blog-post {
+    background: #f8f8f8; // Light background for blog posts
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.remove-blog-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px; // Rounded corners
+    cursor: pointer;
+}
+
+.profile-sidebar {
+    flex: 1;
+    background: white; // Background for sidebar
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.friend-item,
+.follower-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.friend-pic,
+.follower-pic {
+    width: 40px; // Smaller profile pictures
+    height: 40px;
+    border-radius: 20px; // Circular image
+    margin-right: 10px;
+}
+.logout-button {
+    background-color: #ff4757; // Bright red background color
+    color: white; // White text color
+    font-size: 16px; // Font size
+    padding: 10px 15px; // Padding for button
+    border: none; // Remove default border
+    border-radius: 5px; // Rounded corners
+    cursor: pointer; // Pointer cursor on hover
+    transition: background-color 0.3s, transform 0.2s; // Transition effects for hover
+  
+    display: flex; // Flex for aligning items
+    align-items: center; // Center items vertically
+    gap: 5px; // Space between icon and text
+  
+    &:hover {
+      background-color: #e84118; // Darker shade on hover
+      transform: scale(1.05); // Slightly enlarge on hover
+    }
+  
+    &:focus {
+      outline: none; // Remove focus outline
+      box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.5); // Add a subtle shadow on focus
+    }
+  
+    .fa-sign-out-alt {
+      font-size: 18px; // Size for the icon
+    }
+  }
+  

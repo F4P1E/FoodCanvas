@@ -20,6 +20,7 @@ const Navbar = ({ handleCategoryChange }) => {
           <li><Link to="/cooking-news">Cooking News</Link></li> {/* Add Cooking News Link */}
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/register">Register</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
         </ul>
 
         {/* Modern dropdown button for categories */}

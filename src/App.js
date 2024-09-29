@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { KindeProvider, useKindeAuth } from "@kinde-oss/kinde-auth-react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import RecipeList from './components/RecipeList';
 import RecipeDetail from './components/RecipeDetail';
-import CookingNews from './components/CookingNews'; // Import the CookingNews component
+import CookingNews from './components/CookingNews'; 
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Login from './components/Login';
+import Profile from './components/Profile';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import SearchBar from './components/SearchBar';
@@ -18,9 +21,9 @@ import logo from './assets/images/Food Canvas.jpeg';
 import './styles/App.scss';
 
 // ProtectedRoute component to check authentication
-const ProtectedRoute = ({ element }) => {
+const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useKindeAuth();
-  return isAuthenticated ? element : <Navigate to="/login" />;
+  return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
 const App = () => {
@@ -47,12 +50,27 @@ const App = () => {
         <Routes>
           <Route path="/" element={<RecipeList searchQuery={searchQuery} />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
-          <Route path="/cooking-news" element={<CookingNews />} /> {/* Add Cooking News route */}
+          <Route path="/cooking-news" element={<CookingNews />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
         <Footer />
       </Router>
