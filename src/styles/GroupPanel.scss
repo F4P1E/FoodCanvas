@@ -1,0 +1,43 @@
+.group-panel {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+  
+    .group-list {
+      list-style: none;
+      padding: 0;
+  
+      .group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eaeaea;
+  
+        &:last-child {
+          border-bottom: none; // Remove border for the last item
+        }
+  
+        .join-button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+  
+          &:hover {
+            background-color: #0056b3; // Darker shade on hover
+          }
+        }
+      }
+    }
+  }
+  

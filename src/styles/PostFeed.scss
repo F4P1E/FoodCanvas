@@ -1,0 +1,26 @@
+.post-feed {
+    display: flex; // Use flexbox for layout
+    padding: 20px;
+  
+    .group-panel-container {
+      flex: 0 0 250px; // Fixed width for the group panel
+      margin-right: 20px; // Space between the group panel and the feed
+    }
+  
+    .feed-content {
+      flex: 1; // This will take the remaining space
+      background-color: #fff; // Set a background for the feed content
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+      .post {
+        margin-bottom: 15px; // Space between posts
+        padding: 10px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  

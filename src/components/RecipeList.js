@@ -3,25 +3,38 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styles/RecipeList.scss';
 
-const RecipeList = ({ searchQuery, category }) => {
+const RecipeList = ({ searchQuery, category, handleCategoryChange }) => {
   const [recipes, setRecipes] = useState([]);
-  const [loading, setLoading] = useState(true); // State for loading
-  const [error, setError] = useState(''); // State for error messages
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
+        setCategories(response.data.categories);
+      } catch (error) {
+        console.error('Error fetching categories', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      setLoading(true); // Set loading state to true
-      setError(''); // Reset error state
+      setLoading(true);
+      setError('');
       try {
-        // Modify API URL based on category
-        let url = `https://api.spoonacular.com/recipes/random?apiKey=81ad8615ca6340ef85c65ad21fab45e8&number=24`;
+        let url = `https://www.themealdb.com/api/json/v1/1/random.php`;
         if (category) {
-          url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=81ad8615ca6340ef85c65ad21fab45e8&number=24&query=${category}`;
+          url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
         }
 
         const response = await axios.get(url);
-        if (response.data.recipes) {
-          setRecipes(response.data.recipes);
+        if (response.data.meals) {
+          setRecipes(response.data.meals);
         } else {
           setError('No recipes found.');
         }
@@ -29,31 +42,38 @@ const RecipeList = ({ searchQuery, category }) => {
         console.error('Error fetching recipes', error);
         setError('Failed to fetch recipes. Please try again later.');
       } finally {
-        setLoading(false); // Set loading state to false after fetching
+        setLoading(false);
       }
     };
 
     fetchRecipes();
   }, [category]);
 
-  // Filter recipes based on search query
   const filteredRecipes = recipes.filter(recipe =>
-    recipe.title.toLowerCase().includes(searchQuery.toLowerCase())
+    recipe.strMeal.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="recipe-list">
-      {loading ? ( // Show loading state
+      <h2>Categories</h2>
+      <div className="categories">
+        {categories.map(cat => (
+          <button key={cat.idCategory} onClick={() => handleCategoryChange(cat.strCategory)}>
+            {cat.strCategory}
+          </button>
+        ))}
+      </div>
+      {loading ? (
         <p>Loading recipes...</p>
-      ) : error ? ( // Show error message
+      ) : error ? (
         <p>{error}</p>
-      ) : filteredRecipes.length === 0 ? ( // No recipes found
+      ) : filteredRecipes.length === 0 ? (
         <p>No recipes found for your search.</p>
       ) : (
         filteredRecipes.map(recipe => (
-          <Link to={`/recipe/${recipe.id}`} key={recipe.id} className="recipe-card">
-            <img src={recipe.image} alt={recipe.title} className="recipe-image" />
-            <h3 className="recipe-title">{recipe.title}</h3>
+          <Link to={`/recipe/${recipe.idMeal}`} key={recipe.idMeal} className="recipe-card">
+            <img src={recipe.strMealThumb} alt={recipe.strMeal} className="recipe-image" />
+            <h3 className="recipe-title">{recipe.strMeal}</h3>
           </Link>
         ))
       )}

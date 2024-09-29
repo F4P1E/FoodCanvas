@@ -56,6 +56,17 @@ const Profile = () => {
       setEmail(user.email || "");
     }
   }, [user]);
+  useEffect(() => {
+    // Simulating fetching followers data from an API
+    const fetchFollowers = async () => {
+      const response = await fetch('/api/followers'); // Replace with your API endpoint
+      const data = await response.json();
+      setFollowers(data); // Update state with fetched data
+    };
+  
+    fetchFollowers();
+  }, []);
+  
 
   return (
     <div className="profile-page">
@@ -99,6 +110,7 @@ const Profile = () => {
               placeholder="Tell us something about yourself..."
               value={bio}
               onChange={(e) => setBio(e.target.value)}
+              rows={3} // Set intial rows for better spacing
             />
           </div>
         </div>
