@@ -19,6 +19,7 @@ The Recipe Food Application is a modern web application that allows users to exp
 - **Frontend**: React, React Router, Axios
 - **Styling**: SCSS
 - **API**: Spoonacular API for recipe data
+- **KindeAuth**: Login and Register Authentication
 
 ## Installation
 
