@@ -1,69 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
 .navbar {
-  background-color: #333; // Dark background
-  padding: 10px;
+  background-color: #333; /* Dark gray background */
+  padding: 10px 20px; /* Padding for navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
   
   .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width for the navbar */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 
     .navbar-links {
-      list-style: none;
-      display: flex;
+      list-style: none; /* Remove list styling */
+      display: flex; /* Flexbox for links */
+      gap: 20px; /* Space between links */
 
       li {
-        margin: 0 15px;
-
+        font-family: 'Spicy Rice', cursive; /* Font family */
+        
         a {
-          color: white;
-          text-decoration: none;
-          padding: 8px 12px;
-          transition: background-color 0.3s;
+          text-decoration: none; /* Remove underline */
+          color: #ffffff; /* White text color for contrast */
+          padding: 8px 12px; /* Padding for clickable area */
+          border-radius: 4px; /* Slightly rounded corners */
+          transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 
           &:hover {
-            background-color: #ff6347; // Highlight on hover
-            border-radius: 5px;
+            background-color: #ff6f61; /* Change background on hover */
+            color: #ffffff; /* Keep text color white on hover */
           }
         }
       }
     }
+  }
+}
 
-    .dropdown {
-      position: relative;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items */
+  }
 
-      .dropdown-button {
-        background: none;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-
-        &:focus {
-          outline: none; // Remove outline on focus
-        }
-      }
-
-      .dropdown-menu {
-        position: absolute;
-        top: 100%; // Position below the button
-        left: 0;
-        background-color: white; // Background for dropdown
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        border-radius: 5px;
-        margin-top: 5px;
-
-        li {
-          padding: 10px;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #f0f0f0; // Highlight on hover
-          }
-        }
-      }
-    }
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text for mobile */
   }
 }

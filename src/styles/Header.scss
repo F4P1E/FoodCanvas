@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
 .header {
-  background-color: #ffffff; /* Clean white background */
+  background-color: #D2B6BA; /* Pastel pink background */
   padding: 10px 20px; /* Padding for spacing */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-bottom: 1px solid #e0e0e0; /* Light border for separation */
-
+  
   .header-content {
     display: flex;
     align-items: center; /* Align items vertically */
@@ -11,11 +13,10 @@
     position: relative; /* For controlling logo position */
 
     .header-logo {
-      position: absolute;
-      left: 0; /* Push logo to the far left */
+      position: static;
       height: 60px; /* Set consistent logo size */
       width: auto;
-      border-radius: 50%; /* Curve the logo to be circular */
+      border-radius: 30%; /* Curve the logo to be circular */
       margin-left: 20px; /* Add space from the edge */
       transition: transform 0.3s ease; /* Add hover effect for scaling */
 
@@ -23,14 +24,22 @@
         transform: scale(1.1); /* Slight scale on hover */
       }
     }
-
+    
     .header-title {
-      font-size: 2.5em; /* Modern, large title */
+      font-size: 4em; /* Modern, large title */
       font-weight: bold;
-      color: #333; /* Dark gray for better readability */
-      font-family: 'Roboto', sans-serif; /* Modern and clean font */
+      color: #4c482e; /* Use a vibrant color for a modern look */
+      font-family: 'Spicy Rice', cursive; /* Updated font family */
       flex-grow: 1; /* Allow the title to take up space between the logo and the edge */
       text-align: center; /* Center the title */
+      letter-spacing: 1px; /* Slightly increase spacing between letters */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transition: color 0.3s ease; /* Smooth transition for color change */
+      
+      /* Optional: Change color on hover */
+      &:hover {
+        color: #333; /* Dark gray on hover */
+      }
     }
   }
 }

@@ -42,9 +42,7 @@ a {
 
 .app-content {
   padding: 20px; // Add padding to the content area
-  min-height: calc(
-    100vh - 150px
-  ); // Adjust height to prevent overlap with footer
+  min-height: calc(100vh - 150px); // Adjust height to prevent overlap with footer
 }
 
 .container {
@@ -57,7 +55,7 @@ a {
   --background-color: #ffffff;
   --text-color: #333;
   --button-background: #ff6f61;
-  --button-background-light: #ff8f8a;
+  --button-background-light: #ff8f8a; // Lighter button background for hover
   --button-text: #ffffff;
 }
 
@@ -66,7 +64,7 @@ a {
   --background-color: #1e1e1e;
   --text-color: #e0e0e0;
   --button-background: #ff6f61; // Keep the same for visibility
-  --button-background-light: #ff8f8a;
+  --button-background-light: #ff8f8a; // Lighter button background for hover
   --button-text: #ffffff;
 }
 
@@ -80,11 +78,11 @@ button {
   transition: background-color 0.3s ease; // Smooth transition
 
   &:hover {
-    background-color: var(--button-background); // Fallback for hover state
+    background-color: var(--button-background-light); // Use the lighter button background
   }
 }
 
-/* Add specific styles if needed for components */
+/* Specific component styles */
 .recipe-list-container {
   background-color: var(--background-color);
 }
@@ -106,9 +104,10 @@ button {
   transition: background-color 0.3s ease;
 
   &:hover {
-    color: rgba(255, 111, 97, 0.8); /* Use a manual color instead of lighten */
+    background-color: var(--button-background-light); // Use the lighter button background
   }
 }
+
 .logo {
   max-width: 150px; // Set max width for the logo
   height: auto; // Maintain aspect ratio

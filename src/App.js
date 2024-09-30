@@ -17,7 +17,6 @@ import Profile from './components/Profile';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import SearchBar from './components/SearchBar';
-import logo from './assets/images/Food Canvas.jpeg';
 import './styles/App.scss';
 
 // ProtectedRoute component to check authentication
@@ -52,7 +51,7 @@ const App = () => {
           <Header />
           <Navbar handleCategoryChange={handleCategoryChange} />
           <div className="app-header">
-            <img src={logo} alt="Food Canvas Logo" className="logo" />
+            
             <SearchBar onSearch={handleSearch} />
           </div>
           <Routes>

@@ -43,7 +43,7 @@
 
 .name-input,
 .bio-input {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     margin-top: 10px;
     border-radius: 8px; // Rounded corners
@@ -65,7 +65,7 @@
 .blog-input input,
 .blog-input textarea {
     border-radius: 8px; // Rounded corners
-    padding: 12px;
+    padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     transition: border-color 0.2s; // Transition effect
@@ -77,11 +77,11 @@
 }
 
 .add-blog-button {
-    background-color: #007bff; // Primary button color
+    background-color: #F38c10; // Primary button color
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.2s; // Transition effect
 }

@@ -10,12 +10,12 @@ const GroupPanel = () => {
   ];
 
   return (
-    <div className="group-panel">
+    <div className="group-panel-container">
       <h2>Recommended Groups</h2>
       <ul className="group-list">
-        {groups.map(group => (
+        {groups.map((group) => (
           <li key={group.id} className="group-item">
-            <span>{group.name}</span>
+            <span className="group-name">{group.name}</span>
             <button className="join-button">Join</button>
           </li>
         ))}
