@@ -3,39 +3,60 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
+    padding: 40px; /* Increased padding for a spacious look */
+    background-color: #ffffff; /* White background for a clean look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 12px; /* Slightly larger border radius */
+    max-width: 400px; /* Limiting the width for better readability */
+    margin: auto; /* Centering the container */
 }
 
 .auth-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin for separation */
+    font-family: 'Arial', sans-serif; /* A modern font */
+    color: #333; /* Darker text color for better readability */
+    font-size: 1.5rem; /* Increased font size for the title */
 }
 
 .auth-container input {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    padding: 12px; /* Slightly more padding for comfort */
+    border-radius: 8px; /* More rounded corners */
+    border: 1px solid #ddd; /* Light gray border for subtlety */
     width: 100%;
+    font-size: 1rem; /* Larger font for input */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+.auth-container input:focus {
+    border-color: #007bff; /* Blue border on focus for emphasis */
+    outline: none; /* Remove default outline */
 }
 
 .auth-container button {
-    background-color: #007bff;
+    background-color: #007bff; /* Primary button color */
     color: white;
-    padding: 10px;
+    padding: 12px; /* Slightly more padding */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* More rounded corners */
     cursor: pointer;
+    font-size: 1rem; /* Larger font size */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
 }
 
 .auth-container button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .auth-container p {
     cursor: pointer;
     color: #007bff;
-    margin-top: 10px;
+    margin-top: 20px; /* Increased margin for separation */
+    font-size: 0.9rem; /* Slightly larger text */
+    text-align: center; /* Center text for better alignment */
+}
+
+.auth-container p:hover {
+    text-decoration: underline; /* Underline effect on hover */
 }
