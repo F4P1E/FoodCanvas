@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import '../styles/AboutUs.scss';
 
 const About = () => {
@@ -15,7 +16,10 @@ const About = () => {
         Our goal is to create a community where food lovers can share, discover, and enjoy the art of cooking.
         Whether you're a seasoned chef or a kitchen beginner, we have something for everyone.
       </p>
-      <button className="about-cta-button">Learn More</button>
+      {/* Link the button to the Contact page */}
+      <Link to="/contact">
+        <button className="about-cta-button">Learn More</button>
+      </Link>
     </div>
   );
 };

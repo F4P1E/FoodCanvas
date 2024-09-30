@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
-import { useHistory } from 'react-router-dom'; // Import useHistory for redirection
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import '../styles/Auth.scss';
 
 const Auth = () => {
     const { login, register } = useKindeAuth();
-    const history = useHistory(); // To redirect after login
+    const navigate = useNavigate(); // Use useNavigate for redirection
     const [isRegistering, setIsRegistering] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,7 +18,7 @@ const Auth = () => {
             } else {
                 await login({ email, password }); // Login logic
             }
-            history.push('/profile'); // Redirect to profile on success
+            navigate('/profile'); // Redirect to profile on success
         } catch (error) {
             console.error('Authentication failed:', error);
         }

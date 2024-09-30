@@ -12,8 +12,10 @@ const Navbar = ({ handleCategoryChange }) => {
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/cooking-news">Cooking News</Link></li>
           <li><Link to="/recipes">Recipes</Link></li>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/register">Register</Link></li>
+          <li>
+            {/* Combine Login and Register into one link */}
+            <Link to="/auth">Login/Register</Link>
+          </li>
           <li><Link to="/profile">Profile</Link></li>
         </ul>
       </div>
