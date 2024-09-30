@@ -1,36 +1,50 @@
-/* SearchBar.scss */
-
 .search-bar {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center; /* Centers the search bar horizontally */
+  align-items: center; /* Vertically aligns the input and button */
+  margin: 20px 0;
+  gap: 10px; /* Adds space between the input and button */
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%; /* Adjusts the width to take up full available space */
+  max-width: 400px; /* Limits the maximum width */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #ff6f61;
+}
+
+.search-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #ff4c3b; /* Darker shade for hover */
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+      flex-direction: column; /* Stacks input and button vertically on small screens */
+      width: 100%;
   }
-  
-  .search-input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    outline: none;
+
+  .search-input, .search-button {
+      width: 100%; /* Full width for input and button on smaller screens */
   }
-  
-  .search-input:focus {
-    border-color: #ff6f61;
-  }
-  
+
   .search-button {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+      margin-left: 0;
   }
-  
-  .search-button:hover {
-    background-color: #ff4c3b; /* Darker shade for hover */
-  }
-  
+}

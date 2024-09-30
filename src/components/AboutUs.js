@@ -1,36 +1,23 @@
-// src/components/AboutUs.js
 import React from 'react';
-import '../styles/AboutUs.scss'; // Create a new SCSS file for styling
+import '../styles/AboutUs.scss';
 
-const AboutUs = () => {
+const About = () => {
   return (
-    <div className="about-us">
-      <h1>About Us</h1>
-      <p>
-        Welcome to Food Canvas! We are passionate about bringing you delicious and healthy recipes 
-        that fit your lifestyle. Whether you're looking for vegetarian options, meals for your 
-        workout regimen, or simply want to explore new flavors, we have something for everyone.
+    <div className="about-container">
+      <h1 className="about-title">About Us</h1>
+      <img
+        src="https://i.pinimg.com/originals/bd/96/b0/bd96b09a1ecec85753243e4373e1ca66.jpg" // Replace with actual image URL
+        alt="About Us"
+        className="about-image"
+      />
+      <p className="about-text">
+        Welcome to our platform! We are dedicated to helping you find the best recipes from around the world. 
+        Our goal is to create a community where food lovers can share, discover, and enjoy the art of cooking.
+        Whether you're a seasoned chef or a kitchen beginner, we have something for everyone.
       </p>
-      <p>
-        Our mission is to inspire home cooks and food enthusiasts to try new recipes, discover 
-        nutritious ingredients, and enjoy cooking at home. We believe that cooking should be fun, 
-        accessible, and rewarding.
-      </p>
-      <p>
-        Join us on this culinary journey, and let’s make cooking an enjoyable experience together!
-      </p>
-      <h2>Our Team</h2>
-      <p>
-        We are a team of food lovers, chefs, and nutritionists dedicated to creating a vibrant 
-        community around cooking and healthy eating. 
-      </p>
-      <h2>Contact Us</h2>
-      <p>
-        If you have any questions or feedback, feel free to reach out to us at 
-        <a href="mailto:contact@foodcanvas.com"> contact@foodcanvas.com</a>.
-      </p>
+      <button className="about-cta-button">Learn More</button>
     </div>
   );
 };
 
-export default AboutUs;
+export default About;

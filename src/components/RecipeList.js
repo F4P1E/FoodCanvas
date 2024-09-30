@@ -54,11 +54,15 @@ const RecipeList = ({ searchQuery, category, handleCategoryChange }) => {
   );
 
   return (
-    <div className="recipe-list">
-      <h2>Categories</h2>
+    <div className="recipe-list-container">
+      <h2 className="recipe-list-title">Browse Categories</h2>
       <div className="categories">
         {categories.map(cat => (
-          <button key={cat.idCategory} onClick={() => handleCategoryChange(cat.strCategory)}>
+          <button
+            key={cat.idCategory}
+            onClick={() => handleCategoryChange(cat.strCategory)}
+            className={`category-button ${cat.strCategory === category ? 'active' : ''}`}
+          >
             {cat.strCategory}
           </button>
         ))}
@@ -70,12 +74,14 @@ const RecipeList = ({ searchQuery, category, handleCategoryChange }) => {
       ) : filteredRecipes.length === 0 ? (
         <p>No recipes found for your search.</p>
       ) : (
-        filteredRecipes.map(recipe => (
-          <Link to={`/recipe/${recipe.idMeal}`} key={recipe.idMeal} className="recipe-card">
-            <img src={recipe.strMealThumb} alt={recipe.strMeal} className="recipe-image" />
-            <h3 className="recipe-title">{recipe.strMeal}</h3>
-          </Link>
-        ))
+        <div className="recipes-grid">
+          {filteredRecipes.map(recipe => (
+            <Link to={`/recipe/${recipe.idMeal}`} key={recipe.idMeal} className="recipe-card">
+              <img src={recipe.strMealThumb} alt={recipe.strMeal} className="recipe-image" />
+              <h3 className="recipe-title">{recipe.strMeal}</h3>
+            </Link>
+          ))}
+        </div>
       )}
     </div>
   );

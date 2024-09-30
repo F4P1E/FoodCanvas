@@ -1,29 +1,24 @@
 .footer {
-    background-color: #ff6f61; // Footer background color
-    text-align: center; // Center text
-    padding: 20px; // Padding
-    position: relative; // Ensure it is positioned properly
-    width: 100%; // Full width
-    bottom: 0; // Stick to the bottom
-    color: white; // Text color
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 16px;
-  }
-  
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
   .social-icons {
-    margin-top: 10px; // Space above icons
+    margin-top: 10px;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ff8c00; // Change to your desired hover color
+      }
+
+      svg {
+        margin: 0 8px;
+      }
+    }
   }
-  
-  .social-icons a {
-    color: white; // Icon color
-    margin: 0 10px; // Space between icons
-    font-size: 24px; // Icon size
-    transition: color 0.3s; // Smooth color transition
-  }
-  
-  .social-icons a:hover {
-    color: #ffeb3b; // Yellow hover effect
-  }
+}

@@ -26,9 +26,6 @@ const Navbar = ({ handleCategoryChange }) => {
 
         {/* Modern dropdown button for categories */}
         <div className="dropdown">
-          <button className="dropdown-button" onClick={toggleDropdown}>
-            Categories <FaChevronDown className="dropdown-icon" />
-          </button>
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               <li onClick={() => handleCategoryChange('Vegetarian')}>Vegetarian</li>
